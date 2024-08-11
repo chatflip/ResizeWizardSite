@@ -72,6 +72,19 @@ h2 {
     margin-bottom: 1rem;
 }
 
+#examples .image-gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#examples .image-gallery img {
+    width: 30%;
+    margin-bottom: 1rem;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+}
+
 #privacy-policy {
     background-color: #ffffff;
     padding: 1rem;
@@ -100,5 +113,9 @@ footer {
     nav ul li {
         margin-left: 0;
         margin-right: 1rem;
+    }
+
+    #examples .image-gallery img {
+        width: 100%;
     }
 }
