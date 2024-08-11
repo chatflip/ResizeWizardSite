@@ -54,14 +54,12 @@ a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    overflow-x: auto;
 }
 
 .gallery-images img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 30%; /* Adjust the width to fit images in a single line */
+    height: 150px;
+    object-fit: cover;
+    margin: 0 10px;
+    flex-shrink: 0;
 }
