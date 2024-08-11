@@ -1,84 +1,184 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f5a623;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --white: #ffffff;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero {
     text-align: center;
-    padding: 1rem;
-    margin-bottom: 2rem;
+    padding: 4rem 0;
 }
 
 h1 {
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
-    color: #4CAF50;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .cta-button {
     display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     margin-top: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #45a049;
+    background-color: #e09400;
 }
 
-.feature-list {
-    list-style-type: none;
-    padding-left: 0;
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 20px;
 }
 
-.feature-list li {
+section {
+    margin-bottom: 4rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
     margin-bottom: 1rem;
-    padding-left: 30px;
-    position: relative;
 }
 
-.feature-list li::before {
-    content: "✓";
-    color: #4CAF50;
-    position: absolute;
-    left: 0;
+.feature-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: step-counter;
+}
+
+.step {
+    flex-basis: calc(20% - 1rem);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
     font-weight: bold;
 }
 
 .image-gallery {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .image-gallery img {
     width: 30%;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #privacy-policy {
-    margin-top: 2rem;
-    border-top: 1px solid #ddd;
-    padding-top: 1rem;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    margin-top: 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
     text-align: center;
-    font-size: 0.9rem;
-    color: #666;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .step {
+        flex-basis: 100%;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
