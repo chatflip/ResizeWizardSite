@@ -1,3 +1,4 @@
+/* styles/style.css */
 :root {
     --primary-color: #4CAF50;
     --text-color: #000000;
@@ -72,20 +73,14 @@ h2 {
     border: 2px solid var(--primary-color);
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-.cta-button:hover {
-    background-color: var(--accent-color);
+#hero p {
+    font-size: 1.2rem;
+    color: var(--text-color);
 }
 
 .feature-list {
