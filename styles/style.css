@@ -85,11 +85,19 @@ h2 {
     border-radius: 4px;
 }
 
-#privacy-policy {
+#privacy-policy, #external-resources {
     background-color: #ffffff;
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid #4CAF50;
+}
+
+#external-resources ol {
+    padding-left: 20px;
+}
+
+#external-resources li {
+    margin-bottom: 0.5rem;
 }
 
 footer {
