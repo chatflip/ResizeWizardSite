@@ -52,8 +52,9 @@ a:hover {
 
 .gallery-images {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
 }
 
 .gallery-images img {
@@ -62,5 +63,5 @@ a:hover {
     border-radius: 8px;
     margin: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Adjust the width to fit images in a single line */
 }
-
