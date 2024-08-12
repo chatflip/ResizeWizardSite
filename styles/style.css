@@ -64,6 +64,22 @@ h2 {
     border: 2px solid #4CAF50;
 }
 
+.cta-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
 #features ul, #how-to-use ol {
     padding-left: 20px;
 }
